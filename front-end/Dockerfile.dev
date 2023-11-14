@@ -1,0 +1,17 @@
+# pull official base image
+FROM node:20.3.1-alpine
+
+# create project directory
+WORKDIR /app
+
+# copy package
+COPY . .
+
+# install dependencies
+RUN yarn install --frozen-lockfile
+
+# assign permission users
+RUN chmod 755 node_modules/
+
+# run project
+CMD [ "yarn", "start" ]
