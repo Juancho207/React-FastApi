@@ -1,2 +1,9 @@
 fastapi
 uvicorn
+click
+asyncpg
+celery
+redis
+sqlalchemy
+asyncio
+PyJWT
